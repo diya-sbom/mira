@@ -2,6 +2,10 @@ import hashlib
 import json
 from datetime import datetime
 
+def hash_receipt(receipt_data):
+    canonical = json.dumps(receipt_data, sort_keys=True)
+    return hashlib.sha256(canonical.encode()).hexdigest()
+
 
 def hash_state(state_data):
     """
@@ -38,8 +42,7 @@ def verify_transition(prev_state, new_state, proof):
 
     return "PASS", "Valid state transition"
 
-
-def generate_receipt(prev_state, new_state, decision, reason):
+    def generate_receipt(prev_state, new_state, decision, reason, prev_receipt_hash=None):
     """
     Create receipt after verification
     """
@@ -49,11 +52,14 @@ def generate_receipt(prev_state, new_state, decision, reason):
         ).hexdigest(),
         "prev_state_hash": prev_state["hash"],
         "new_state_hash": new_state["hash"],
+        "prev_receipt_hash": prev_receipt_hash,
         "decision": decision,
         "timestamp": datetime.utcnow().isoformat(),
         "reason": reason,
         "verifier": "MIRA_v0"
     }
+
+    receipt["receipt_hash"] = hash_receipt(receipt)
 
     return receipt
 
