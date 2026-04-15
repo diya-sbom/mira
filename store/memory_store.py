@@ -26,3 +26,11 @@ def append_state(new_state, receipt):
 
     store.append(entry)
     save_store(store)
+
+
+def get_last_receipt_hash():
+    store = load_store()
+    if not store:
+        return None
+    last_receipt = store[-1]["receipt"]
+    return last_receipt.get("receipt_hash")
