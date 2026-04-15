@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "prev_state_hash",
+    "new_state_hash",
+    "operation",
+    "actor",
+    "timestamp"
+  ],
+  "properties": {
+    "prev_state_hash": {
+      "type": "string"
+    },
+    "new_state_hash": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  }
+}
