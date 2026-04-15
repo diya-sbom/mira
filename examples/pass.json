@@ -1,0 +1,23 @@
+{
+  "prev_state": {
+    "state_id": "1",
+    "version": 1,
+    "data": {
+      "value": "A"
+    },
+    "hash": "AUTO"
+  },
+  "new_state": {
+    "state_id": "2",
+    "version": 2,
+    "data": {
+      "value": "B"
+    },
+    "hash": "AUTO"
+  },
+  "proof": {
+    "operation": "update",
+    "actor": "agent_1",
+    "timestamp": "AUTO"
+  }
+}
