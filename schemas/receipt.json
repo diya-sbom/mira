@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "prev_state_hash",
+    "new_state_hash",
+    "decision",
+    "timestamp"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string"
+    },
+    "prev_state_hash": {
+      "type": "string"
+    },
+    "new_state_hash": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["PASS", "FAIL"]
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "verifier": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  }
+}
