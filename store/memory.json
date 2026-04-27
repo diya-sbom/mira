@@ -1,1 +1,632 @@
-[]
+[
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "HACKED"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "b19183eead847131fb218db61c55bbada49846e32d566e52cdb34d99530b215d",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": null,
+      "decision": "PASS",
+      "timestamp": "2026-04-15T04:49:21.573826",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "e02838062c2886841677738d0a96f8b124e955bae03e9f94a1ee87e6daac6be4"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "4381e5675e11190db4d207cdb4266c6a4dc98bba5d1ec78fcc2c258dc8c588cd",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "e02838062c2886841677738d0a96f8b124e955bae03e9f94a1ee87e6daac6be4",
+      "decision": "PASS",
+      "timestamp": "2026-04-15T04:50:02.528798",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "647d2075a39f19b7164ce47aabc7458f1746d38b807bd2e51782d1ffed80872e"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "0c96752461c2a90f4ad294dcb1cbdc679cc3c3ad8f3ea5f65bda166a1105580f",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "647d2075a39f19b7164ce47aabc7458f1746d38b807bd2e51782d1ffed80872e",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:04:17.422664",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "c6a1ba4820d5bf1e1d5261e61f8056f6bd85a4a1ab0010f4ee662764cf8c64fc"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "49c3c4f898b1b2111d096092c4adccb9f5de875aebfd3d75fff8a7415fb81f58",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "c6a1ba4820d5bf1e1d5261e61f8056f6bd85a4a1ab0010f4ee662764cf8c64fc",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:04:17.429899",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "535ab5cfe035587b71fcaf7dd9fdc4bf0121707bb5b0cfcc8bb3cc728066147a"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "beaaa752f93bf39ebe4749fe1b58597adb2da041fa60a9f2bd4f4c3ffc5f279c",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "535ab5cfe035587b71fcaf7dd9fdc4bf0121707bb5b0cfcc8bb3cc728066147a",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:10:35.882222",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "1d5db07c3fe4b2afab43f37b8ae4195ff2da6d39fad40da4ec644d631e1fe1a4"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "HACKED"
+      },
+      "hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2"
+    },
+    "receipt": {
+      "receipt_id": "e10e016ac05dcfb5810ed43186bf23b9c3bfd5861c1505e257d6ee3847174013",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2",
+      "prev_receipt_hash": "1d5db07c3fe4b2afab43f37b8ae4195ff2da6d39fad40da4ec644d631e1fe1a4",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:10:35.887570",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "5186033dece55b659dbd0aa22775fb5a51f2a3486e490f8d963d03c73049c8ff"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "a75b41d4a48c0eb1138646d97bcf2405001aa0f73a544026e21dd556ef5785e4",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "5186033dece55b659dbd0aa22775fb5a51f2a3486e490f8d963d03c73049c8ff",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:19:42.592736",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "6b48ca38ff4e6ba4ce23285fde08169ceab40b52d545353b6fcffe3dc269f978"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "HACKED"
+      },
+      "hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2"
+    },
+    "receipt": {
+      "receipt_id": "2ed98299014ed0841217861970278c712030f25e06ba8da7e5c556de2aae66dd",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2",
+      "prev_receipt_hash": "6b48ca38ff4e6ba4ce23285fde08169ceab40b52d545353b6fcffe3dc269f978",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:19:42.599367",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "65f2903d77a776973f7b3119536f76f18884359029b94130faf94c68d2eeb94d"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "f52cb37ccebdc748c092b329030c736d7cf2ef7aa5a0c0f265ea55a828353e2d",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "65f2903d77a776973f7b3119536f76f18884359029b94130faf94c68d2eeb94d",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:23:11.227776",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "abcfb38600e0152a8ce38201f3a5d5f49201899dab81e3a1e142678e62922b8c"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "HACKED"
+      },
+      "hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2"
+    },
+    "receipt": {
+      "receipt_id": "8ee869c6ad8e2ba469b90d5db832c5ca38d92762bae2c5c95bbe90118878f7d9",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "f146bc32aeb563d5857d875743eb18db134c545621ede4fdc393086f5eb019a2",
+      "prev_receipt_hash": "abcfb38600e0152a8ce38201f3a5d5f49201899dab81e3a1e142678e62922b8c",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:23:11.232781",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "d3cb7902352a9780df6bfca6856b760aee37df1c35174fe87dcd8bf462b53496"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "ac8bd4792156e88fecbf62a5303a3ae7fbadb6093d97e7eeeb26ec11d6b6862b",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "d3cb7902352a9780df6bfca6856b760aee37df1c35174fe87dcd8bf462b53496",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:28:53.527454",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "c119ae2a49743acfd5e22bcef2a1ebb20011ef80d3074d25453935baf7e46dff"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "d858e9357cd8ec3397678a8348b9afbc6679b30c31d1a29db22332d16402a846",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "c119ae2a49743acfd5e22bcef2a1ebb20011ef80d3074d25453935baf7e46dff",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:53:36.067829",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "49ca32975acdf67084aa6ee0e3275091ed95d1c2567bbad2a8f6da7fc471a975"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "dff3a1e75ad3379a4f1be62bb42cd0872ab04db77f9fbce209df65881c3d94de",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "49ca32975acdf67084aa6ee0e3275091ed95d1c2567bbad2a8f6da7fc471a975",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:56:30.227465",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "656ecce2c191444de157ef78185b40262b9b049184993eaec0b86434c5e8cfa2"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "62f113647ab990abc2a58dbf84409125d8999bb149b527662d1d5014ada1239f",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "656ecce2c191444de157ef78185b40262b9b049184993eaec0b86434c5e8cfa2",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T03:56:30.233410",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "2fb6464123b822a164409fabc8f4853e7f3c34d4526be938f4a0f963f488e43e"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "b45f29024774749e9a8c7f0be3c3d92641bd2399521c3cc6c69f7ba046870096",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "2fb6464123b822a164409fabc8f4853e7f3c34d4526be938f4a0f963f488e43e",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T04:17:05.534044",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "742dac5568148b0898938a99c94e42f6625f2b3b2742f87dfe3cb4924bb37ebd"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "6696642dd71a65f61d6ddd187239da707a13ec7cdc77fa4192be5a5fe02efe6e",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "742dac5568148b0898938a99c94e42f6625f2b3b2742f87dfe3cb4924bb37ebd",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T04:17:05.539748",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "afd1fc22a5e362af081cb1d430912a01b5ee722fa296bb0e8f4f73344b80aec6"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "31bb8993f36d8df109ad6a67ecaa12aa14383ff69369d572656c65a50d41855f",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "afd1fc22a5e362af081cb1d430912a01b5ee722fa296bb0e8f4f73344b80aec6",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T04:23:00.638307",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "37fac2dd6090ffa3b6e87f06ca35a459a83c713d42cda7b22b1fa5a87d8b2862"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "54ded27dc59ece84bf84694286979da28e083ace919d51cd656796f6b7238da1",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "37fac2dd6090ffa3b6e87f06ca35a459a83c713d42cda7b22b1fa5a87d8b2862",
+      "decision": "PASS",
+      "timestamp": "2026-04-16T04:23:00.643321",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "0184629fc2d291949ab1e32ba217c56e3fd553ba17c22a2c90415685c78ac425"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "d57c169fe82b19caa4d3505a8d2bb7a3644512499f97874b3e58288c9b754f8b",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "0184629fc2d291949ab1e32ba217c56e3fd553ba17c22a2c90415685c78ac425",
+      "decision": "PASS",
+      "timestamp": "2026-04-19T03:43:38.432646",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "5175376a4bc691bc51bbb692fb445f4b4dd1997a6f44179c389f2705dbeb6877"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "9a7a46aed67451ead0084dd13ce0fab502a9edb985b80afa1f13bb356c7c4fb4",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "5175376a4bc691bc51bbb692fb445f4b4dd1997a6f44179c389f2705dbeb6877",
+      "decision": "PASS",
+      "timestamp": "2026-04-19T03:43:38.442586",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "2ad5498e327636e4f4bbf5367ad20756ae83bb02afaa5427bfb10a50a5e9f7b3"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "c23ecd57d795bed3765d6335d4c43b0632f9e93b093803dd11a22acda5502264",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "2ad5498e327636e4f4bbf5367ad20756ae83bb02afaa5427bfb10a50a5e9f7b3",
+      "decision": "PASS",
+      "timestamp": "2026-04-19T03:48:25.988031",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "d48cca093e6189e4901818d61384b0bfecd1ced50041ade3912f786de11a15bf"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "293405495bb5c15e26babc878b200c037278e5a3c459bc6c1d173c30e925011b",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "d48cca093e6189e4901818d61384b0bfecd1ced50041ade3912f786de11a15bf",
+      "decision": "PASS",
+      "timestamp": "2026-04-19T03:48:25.995468",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "c67827a68651026a50a0b07559e2cbee607f6b72115e24203726e5dc98c2cd73"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "518eb324d8c704bb90632e2546915271ca43afb898c13a53d3f8226930748b9d",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "c67827a68651026a50a0b07559e2cbee607f6b72115e24203726e5dc98c2cd73",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T02:24:07.636349",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "ee814a632b07fbb08982646eae99cbfa012e94b56cb44659ce0b9bf4ba34cccb"
+    }
+  },
+  {
+    "state": {
+      "state_id": "2",
+      "version": 2,
+      "data": {
+        "value": "B"
+      },
+      "hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438"
+    },
+    "receipt": {
+      "receipt_id": "2b753efe822528c68f675604ef897b41feb72040286fa2ea0f3cf63ace7821e2",
+      "prev_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "new_state_hash": "edc4bd61eb401ddb52b97802ddc3774444933ae79255c14da3d8e1937603c438",
+      "prev_receipt_hash": "ee814a632b07fbb08982646eae99cbfa012e94b56cb44659ce0b9bf4ba34cccb",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T02:24:07.645449",
+      "reason": "Valid state transition",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "318d2d85eda3d1bd559d6b9daa8d563725d12e0d51296a381aae50d2d3f47ff3"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "e8d416f4cfae33c63ffc5d29c6c08581305f5663fea22f2f269545c06359991b",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "318d2d85eda3d1bd559d6b9daa8d563725d12e0d51296a381aae50d2d3f47ff3",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T02:28:38.611192",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "77f5b1d8b51d759691502aa8820076d462a6f2ad2cfd5a11bb786f127c8eb211"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "6882fbf7cd721ffbba431c3c3aa304ed44950114dcbc301a3b5784eeb848a995",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "77f5b1d8b51d759691502aa8820076d462a6f2ad2cfd5a11bb786f127c8eb211",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T02:29:47.612276",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "e3d42ae78557819efca92a1861c4805d7afdf9ad8b7a29372c10d038449c1aae"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "6893d331b0abd96bd4fa8c81a14de41ecfce93167b76c2996e884c2fea5fd952",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "e3d42ae78557819efca92a1861c4805d7afdf9ad8b7a29372c10d038449c1aae",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T02:30:08.676011",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "4b35bc4f8fafe259c7a4226130384942aaec6a700a5408cbb86d56fa324aec7e"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "a183305cd49385b3ddefd75930e8f55f5ea3aec23aac4769304e0c9954b8ff5c",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "4b35bc4f8fafe259c7a4226130384942aaec6a700a5408cbb86d56fa324aec7e",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T03:37:24.838806",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "6bc062a97ad502535663e939394d1586de62a9385747270aa3cba814c97126bc"
+    }
+  },
+  {
+    "state": {
+      "state_id": "1",
+      "version": 1,
+      "data": {
+        "value": "A"
+      },
+      "hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86"
+    },
+    "receipt": {
+      "receipt_id": "dc2a5c1048d2a5ad3ba6a0ffb9acf6f5ee361791f47a8f4a4cbf2323f3125aeb",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "736075ee358d511a7d2b06be558f9e9ac48c18924f946768391b9d5da524fc86",
+      "prev_receipt_hash": "6bc062a97ad502535663e939394d1586de62a9385747270aa3cba814c97126bc",
+      "decision": "PASS",
+      "timestamp": "2026-04-24T04:03:59.051742",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "7b36753e9be38b6d4e2dcf7c7c3750e8fb0810b24d3f9d6392c7b18a5460a7f7"
+    }
+  },
+  {
+    "state": {
+      "state_id": "runner-1",
+      "version": 1,
+      "data": {
+        "task": "run-dependent-workflow"
+      },
+      "hash": "98a5760d25a1543e43da28758212d0430724aa3ce141dd3cd35c8fc9dc88a24e"
+    },
+    "receipt": {
+      "receipt_id": "a3783092ca62c1ee08725c70d6f0c36637044a45881134f74bd4400ce988dab7",
+      "prev_state_hash": "GENESIS",
+      "new_state_hash": "98a5760d25a1543e43da28758212d0430724aa3ce141dd3cd35c8fc9dc88a24e",
+      "prev_receipt_hash": "7b36753e9be38b6d4e2dcf7c7c3750e8fb0810b24d3f9d6392c7b18a5460a7f7",
+      "decision": "PASS",
+      "timestamp": "2026-04-27T02:19:37.802403",
+      "reason": "Genesis state accepted",
+      "verifier": "MIRA_v0",
+      "receipt_hash": "73e79e5bf7f09a33b4f0d74071ad62d467ae93318653e5719eec78334070bdac"
+    }
+  }
+]

@@ -1,0 +1,8 @@
+MIRA uses a split model:
+
+- Public: Specification (SPEC.md), examples, integration patterns
+- Private: Core verification logic (MIRA Core)
+
+The core logic is not distributed as open source.
+
+Use of MIRA Core in production requires a commercial license.

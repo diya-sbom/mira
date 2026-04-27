@@ -1,34 +1,62 @@
 # MIRA Canonical Examples
 
 ## Version
-MIRA Core v0.1
+MIRA Core v1.0 (Frozen)
+
+---
 
 ## Canonical PASS Example
+
 File:
-`examples/pass.json`
+examples/canonical/pass.json
 
 Meaning:
-A valid state transition with correct previous state hash, correct new state hash, correct version increment, and required proof fields.
+A valid state transition with correct structure and proof.
 
 Expected result:
-`Decision: PASS`
+Decision: PASS  
+Reason: Genesis state accepted
+
+---
 
 ## Canonical FAIL Example
+
 File:
-`examples/fail.json`
+examples/canonical/fail.json
 
 Meaning:
 An invalid state transition with broken proof linkage.
 
 Expected result:
-`Decision: FAIL`
+Decision: FAIL  
+Reason: Previous state hash mismatch
+
+---
+
+## Command
+
+From an external agent environment:
+
+python3 examples/canonical/run_canonical.py
+
+---
+
+## Result
+
+MIRA accepts the valid transition and rejects the invalid transition.
+
+---
 
 ## Purpose
-These two examples are the canonical reference pair for MIRA Core v0.1.
+
+These two examples form the canonical reference pair for MIRA Core v1.0.
 
 They define the minimum demonstrable difference between:
-- accepted memory transition
-- rejected memory transition
+- accepted state transition
+- rejected state transition
+
+---
 
 ## Rule
-Do not silently change the meaning of these examples without versioning.
+
+Do not change the meaning of these examples without versioning.

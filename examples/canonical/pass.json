@@ -1,0 +1,15 @@
+{
+  "prev_state": null,
+  "new_state": {
+    "state_id": "1",
+    "version": 1,
+    "data": {
+      "value": "A"
+    }
+  },
+  "proof": {
+    "operation": "create",
+    "actor": "canonical-demo",
+    "timestamp": "AUTO"
+  }
+}

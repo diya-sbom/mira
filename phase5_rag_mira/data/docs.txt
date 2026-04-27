@@ -1,0 +1,4 @@
+MIRA is a Memory Integrity and Receipt Architecture system.
+MIRA verifies state transitions before memory is accepted.
+MIRA returns PASS or FAIL.
+MIRA blocks execution when verification fails.

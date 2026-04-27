@@ -1,0 +1,23 @@
+{
+  "prev_state": {
+    "state_id": "1",
+    "version": 1,
+    "data": {
+      "value": "A"
+    }
+  },
+  "new_state": {
+    "state_id": "2",
+    "version": 2,
+    "data": {
+      "value": "HACKED"
+    }
+  },
+  "proof": {
+    "operation": "update",
+    "actor": "canonical-demo",
+    "timestamp": "AUTO",
+    "prev_state_hash": "INVALID",
+    "new_state_hash": "AUTO"
+  }
+}
