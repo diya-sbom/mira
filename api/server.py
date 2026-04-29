@@ -20,6 +20,7 @@ def verify(state: dict):
 
     decision = "PASS" if "proof" in state else "FAIL"
 
+    state_hash = canonical_hash(state)
     record = {
         "ts": ts,
         "state": state,
@@ -29,6 +30,7 @@ def verify(state: dict):
 
     ledger_entry = {
         "record_hash": record_hash,
+        "state_hash" : state_hash,
         "ts": ts,
         "decision": decision
     }
