@@ -35,4 +35,24 @@ Canonical FAIL receipt:
 
 ## Invariant
 
-No valid MIRA receipt → no accepted output.
+No valid MIRA receipt → no accepted output
+
+## BIL Evidence Ledger
+
+Accepted MIRA receipts may be appended to BIL.
+
+BIL provides:
+
+- append-only evidence
+- hash-chain continuity
+- independent verification
+- tamper detection
+
+The BIL entry semantics are defined in:
+
+`BIL_FREEZE.md`
+
+Core invariant:
+
+No valid receipt → no ledger entry.
+No valid hash chain → no trusted history..
