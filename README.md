@@ -8,6 +8,21 @@ It ensures:
 - history is tamper-evident
 ---
 
+## Verification Contract
+
+MIRA’s current verification semantics are defined in:
+
+- `VERIFICATION_CONTRACT.md`
+- `CORE_FREEZE.md`
+- `canonical_examples/PASS_RECEIPT.json`
+- `canonical_examples/FAIL_RECEIPT.json`
+
+Core invariant:
+
+No valid MIRA receipt → no accepted output.
+
+---
+
 ## 2-Minute Proof
 
 Start MIRA:
