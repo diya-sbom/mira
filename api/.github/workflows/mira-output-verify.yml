@@ -1,0 +1,30 @@
+name: MIRA Output Verification
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-output:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Create protected output
+        run: |
+          mkdir -p protected_output
+          echo "controlled output" > protected_output/output.txt
+
+      - name: Create valid receipt
+        run: |
+          echo '{"decision":"PASS","record_hash":"demo"}' > protected_output/receipt.json
+
+      - name: Verify output
+        run: python3 verify_output.py
