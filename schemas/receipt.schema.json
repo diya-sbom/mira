@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MIRA Receipt",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "decision",
+    "record_hash"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "integer"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["PASS", "FAIL"]
+    },
+    "record_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+Logging to: /Users/diyaarun/mira/logs/mira_run_2026-05-11T21-03-03.log
+=== Step 1: Appending ledger ===
+=== Step 2: Generating receipt ===
+=== Step 3: Copying ledger and receipt to consumer repo (safe) ===
+=== Step 3a: Committing & pushing to Git ===
+=== Step 4: Verifying consumer via API (safe) ===
+✅ MIRA API verification succeeded
+=== Step 4b: Local verification ===
+✅ MIRA workflow completed successfully and pushed to Git
+✅ API verification passed as well
