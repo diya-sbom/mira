@@ -33,9 +33,21 @@ Status: Not started
 Status: Not started
 
 ## Phase 4 — Composite Flow
-- Enforce MIRA → Diya → Executor → MIRA
-- Bind proof references
+- Enforce exact sequence:
+  - Adopter → Sentinel
+  - Sentinel → MIRA
+  - MIRA → Diya
+  - Diya → Executor
+  - Executor → MIRA
+  - MIRA → AFS
+  - AFS → State Store
+- Require pre-state validation before action
+- Require Diya action verification before execution
+- Require post-state validation before commit
+- Bind proof references across the full flow
 - Deny partial success
+
+Status: Not started
 
 Status: Not started
 
