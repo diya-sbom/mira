@@ -110,14 +110,34 @@ Sentinel → MIRA → Diya → Executor → MIRA → AFS
 
 ## 9. Composite Sequence
 
-1. Validate proposed state using MIRA
-2. Validate action using Diya
-3. Execute the action
-4. Validate resulting state using MIRA
-5. Commit state using AFS
+For STATE_ACTION_COMPOSITE operations, Sentinel enforces this exact sequence:
+
+1. Validate current or proposed state using MIRA
+2. Validate the requested action using Diya
+3. Release the approved action to the Executor
+4. Validate the resulting post-action state using MIRA
+5. Commit the verified state using AFS
 6. Return ALLOW
 
 If any step fails, Sentinel returns DENY.
+
+Required flow:
+
+Adopter
+    ↓
+Sentinel
+    ↓
+MIRA
+    ↓
+Diya
+    ↓
+Executor
+    ↓
+MIRA
+    ↓
+AFS
+    ↓
+State Store
 
 ---
 
