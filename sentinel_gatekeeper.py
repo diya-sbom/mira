@@ -50,8 +50,21 @@ def sentinel_gatekeeper(operation_type, payload, mira=None, diya=None):
             "mira_receipt": mira_result
         })
 
-    if operation_type == ACTION_ONLY:
-        return deny("ACTION_ROUTING_NOT_IMPLEMENTED")
+     if operation_type == ACTION_ONLY:
+         if diya is None:
+              return deny("DIYA_NOT_AVAILABLE")
+
+    try:
+        diya_result = diya.verify_action(payload)
+    except Exception:
+        return deny("DIYA_VERIFICATION_ERROR")
+
+    if not diya_result:
+        return deny("ACTION_REJECTED_BY_DIYA")
+
+    return allow({
+        "diya_verification_record": diya_result
+    })
 
     if operation_type == STATE_ACTION_COMPOSITE:
         return deny("COMPOSITE_ROUTING_NOT_IMPLEMENTED")
