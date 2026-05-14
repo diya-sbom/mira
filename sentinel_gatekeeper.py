@@ -33,9 +33,22 @@ def deny(reason):
     )
 
 
-def sentinel_gatekeeper(operation_type, payload):
+def sentinel_gatekeeper(operation_type, payload, mira=None, diya=None):
     if operation_type == STATE_ONLY:
-        return deny("STATE_ROUTING_NOT_IMPLEMENTED")
+        if mira is None:
+            return deny("MIRA_NOT_AVAILABLE")
+
+        try:
+            mira_result = mira.verify_state(payload)
+        except Exception:
+            return deny("MIRA_VERIFICATION_ERROR")
+
+        if not mira_result:
+            return deny("STATE_REJECTED_BY_MIRA")
+
+        return allow({
+            "mira_receipt": mira_result
+        })
 
     if operation_type == ACTION_ONLY:
         return deny("ACTION_ROUTING_NOT_IMPLEMENTED")
