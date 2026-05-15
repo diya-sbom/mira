@@ -1,0 +1,7 @@
+{
+  "decision": "FAIL",
+  "expected_parent_hash": "252304a4f5e26753dcfcb49fd1a9666cb0b31d06514edb28e9aec3aa886ce32d",
+  "reason": "parent_hash_mismatch",
+  "received_parent_hash": "wrong_hash_for_fail_test",
+  "timestamp": "2026-05-15T04:15:14.021188+00:00"
+}
