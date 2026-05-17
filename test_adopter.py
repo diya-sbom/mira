@@ -7,8 +7,11 @@ from sentinel_gatekeeper import (
 
 
 class MIRAStub:
+    
+
     def verify_state(self, payload):
-        return True
+        return payload.get("valid", False)
+
 
     def verify_intent(self, payload):
         return True
@@ -77,3 +80,12 @@ if __name__ == "__main__":
     adopter.run_state_only()
     adopter.run_action_only()
     adopter.run_composite()
+
+print("\n=== Testing invalid STATE_ONLY ===")
+decision = sentinel_gatekeeper(
+    STATE_ONLY,
+    {"valid": False},
+    mira=mira,
+    diya=diya,
+)
+print("INVALID_STATE_ONLY:", decision.status, decision.reason)
