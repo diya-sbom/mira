@@ -68,8 +68,10 @@ class TestAdopter:
 
 
 if __name__ == "__main__":
+    
     mira = MIRAStub()
-    diya = DiyaStub()
+    from real_diya import RealDiya
+    diya = RealDiya()
 
     adopter = TestAdopter(
         sentinel_gatekeeper,
