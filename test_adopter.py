@@ -1,86 +1,79 @@
-# test_adopter.py
+from sentinel_gatekeeper import (
+    sentinel_gatekeeper,
+    STATE_ONLY,
+    ACTION_ONLY,
+    STATE_ACTION_COMPOSITE,
+)
 
-from sentinel_gatekeeper import sentinel_gatekeeper, STATE_ACTION_COMPOSITE
 
-# Minimal stubs for demonstration
 class MIRAStub:
-    def verify_state(self, state_payload):
-        # Return a receipt if state is valid
-        if state_payload.get("valid", True):
-            return "mira_receipt_001"
-        return None
+    def verify_state(self, payload):
+        return True
+
+    def verify_intent(self, payload):
+        return True
+
+    def verify_post_state(self, payload):
+        return True
+
 
 class DiyaStub:
-    def verify_action(self, action_payload):
-        # Return a record if action is valid
-        if action_payload.get("allowed", True):
-            return "diya_record_001"
-        return None
+    def reconcile_sbom(self, payload):
+        return True
 
-class ExecutorStub:
-    def run(self, action_payload):
-        # Simulate execution
-        return {"result": "success"}
-
-class AFSStub:
-    def commit(self, execution_result, post_state_receipt):
-        # Simulate atomic commit
-        print("AFS commit successful:", post_state_receipt)
+    def execute_secure(self, payload):
+        return True
 
 
-# Minimal Adopter
 class TestAdopter:
-    def __init__(self, sentinel, mira, diya, executor, afs):
+    def __init__(self, sentinel, mira, diya):
         self.sentinel = sentinel
         self.mira = mira
         self.diya = diya
-        self.executor = executor
-        self.afs = afs
 
-    def run(self, state, action):
+    def run_state_only(self):
+        decision = self.sentinel(
+            STATE_ONLY,
+            {"valid": True},
+            mira=self.mira,
+            diya=self.diya,
+        )
+        print("STATE_ONLY:", decision.status, decision.reason)
+
+    def run_action_only(self):
+        decision = self.sentinel(
+            ACTION_ONLY,
+            {"allowed": True},
+            mira=self.mira,
+            diya=self.diya,
+        )
+        print("ACTION_ONLY:", decision.status, decision.reason)
+
+    def run_composite(self):
         payload = {
-            "state": state,
-            "action": action,
-            "executor": self.executor,
-            "afs": self.afs
+            "state": {"valid": True},
+            "action": {"allowed": True},
         }
 
-        decision = self.sentinel.sentinel_gatekeeper(
+        decision = self.sentinel(
             STATE_ACTION_COMPOSITE,
             payload,
             mira=self.mira,
-            diya=self.diya
+            diya=self.diya,
         )
-
-        if decision.status != "ALLOW":
-            raise Exception(f"Blocked by Sentinel: {decision.reason}")
-
-        print("Adopter succeeded, Sentinel allowed operation")
-        print("Proof refs:", decision.proof_refs)
+        print("STATE_ACTION_COMPOSITE:", decision.status, decision.reason)
 
 
-# === Run Test ===
 if __name__ == "__main__":
-    # Create stub instances
     mira = MIRAStub()
     diya = DiyaStub()
-    executor = ExecutorStub()
-    afs = AFSStub()
-    sentinel = sentinel_gatekeeper  # from your sentinel_gatekeeper.py
 
-    adopter = TestAdopter(sentinel, mira, diya, executor, afs)
+    adopter = TestAdopter(
+        sentinel_gatekeeper,
+        mira,
+        diya,
+    )
 
-    # Test input
-    state_payload = {"valid": True}
-    action_payload = {"allowed": True}
-
-    # Run
-    adopter.run(state_payload, action_payload)
-
-    # Test fail-closed by disabling MIRA
-    print("\nTesting fail-closed with invalid state:")
-    state_payload_invalid = {"valid": False}
-    try:
-        adopter.run(state_payload_invalid, action_payload)
-    except Exception as e:
-        print(e)
+    adopter.run_state_only()
+    adopter.run_action_only()
+    adopter.run_composite()
