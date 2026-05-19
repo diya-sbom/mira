@@ -18,3 +18,8 @@ python3 run_canonical_examples.py
 Confirm the expected result:
 
 CANONICAL EXAMPLES: ALL PASS
+
+
+
+
+Commit and open a pull request.
