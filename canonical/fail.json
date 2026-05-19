@@ -1,5 +1,11 @@
 {
-  "data": "external system request"
+  "expected_decision": "DENY",
+  "description": "Invalid state should be rejected",
+  "state": {
+    "valid": false
+  },
+  "action": {
+    "allowed": true,
+    "artifact": "artifact.txt"
+  }
 }
-
-

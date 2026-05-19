@@ -1,4 +1,11 @@
 {
-  "data": "external system request",
-  "proof": "valid-proof"
+  "expected_decision": "ALLOW",
+  "description": "Valid state and approved action",
+  "state": {
+    "valid": true
+  },
+  "action": {
+    "allowed": true,
+    "artifact": "artifact.txt"
+  }
 }
