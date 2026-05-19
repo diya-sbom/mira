@@ -1,7 +1,28 @@
 # Security Policy
 
-If you discover a vulnerability, please report it privately.
+## Reporting a Vulnerability
 
-Contact: security@diyalabs.example
+Please report security issues privately to the maintainers.
 
-Do not open public issues for security vulnerabilities.
+Include:
+
+- Description of the issue
+- Reproduction steps
+- Potential impact
+- Suggested remediation
+
+## Supported Version
+
+Current supported version:
+
+- v1.0
+
+## Scope
+
+Security review includes:
+
+- Verification logic
+- Receipt integrity
+- Ledger integrity
+- API verification endpoint
+- Canonical regression tests
