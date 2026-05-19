@@ -1,6 +1,6 @@
 {
-  "expected_decision": "ALLOW",
-  "description": "Valid state and approved action",
+  "expected_decision": "DENY",
+  "description": "Current RealDiya configuration blocks this action",
   "state": {
     "valid": true
   },
