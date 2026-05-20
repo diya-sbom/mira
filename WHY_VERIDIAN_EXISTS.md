@@ -1,39 +1,44 @@
 # Why Veridian Exists
 
-AI systems can execute actions, modify files, and persist memory.
+Modern AI systems can execute actions and modify persistent state.
 
-Most systems assume these operations are trustworthy once they are requested.
+Without verification, they may:
 
-Veridian changes that assumption.
+- Write invalid or corrupted memory
+- Accept tampered state
+- Produce non-auditable decisions
+- Execute actions without deterministic proof
 
-Veridian requires every action and every state transition to pass independent verification before it is accepted.
+Veridian solves this problem.
 
-If verification fails, execution halts and no state is committed.
+It introduces a cryptographic control plane that verifies:
 
-This creates a fail-closed control layer for AI systems.
+1. Intent before execution
+2. State transitions before persistence
+3. Historical continuity through tamper-evident receipts
+
+If verification fails:
+
+- Execution halts
+- State is rejected
+- No commit occurs
 
 ## Core Principle
 
-No valid proof → no accepted state.
+No valid receipt → no accepted state transition.
 
-## Architecture
+## Enterprise Value
 
-Adapters force external frameworks into the verification path.
+Veridian provides:
 
-Sentinel prevents bypass.
+- Deterministic verification
+- Tamper-evident audit trails
+- Fail-closed enforcement
+- Compliance-ready evidence
+- Operational dependency
 
-Diya verifies actions before execution.
+## Strategic Thesis
 
-MIRA verifies state transitions before persistence.
+As autonomous systems become more capable, organizations will require a trusted control layer that verifies what agents do and what they remember.
 
-AFS commits only verified state.
-
-## Why It Matters
-
-As AI systems become more autonomous, the cost of unverified execution increases.
-
-Veridian provides a deterministic control layer that allows organizations to enforce integrity, traceability, and tamper-evident history.
-
-## In One Sentence
-
-Veridian is a cryptographic control plane for autonomous systems.
+Veridian is designed to be that control layer.
