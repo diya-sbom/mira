@@ -5,6 +5,8 @@
 | veridian-first-dependent | Basic dependent application | Execution blocked |
 | veridian-compliance-reviewer | Compliance review workflow | Review blocked |
 | veridian-policy-enforcer | Policy enforcement workflow | Approval blocked |
+| veridian-contract-reviewer | Contract review workflow | Contract memory write blocked |
+| veridian-audit-evidence-verifier | Audit evidence workflow | Evidence review blocked |
 
 ## Core Principle
 
