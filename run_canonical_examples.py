@@ -71,10 +71,9 @@ def run_example(path):
 
 if __name__ == "__main__":
     results = [
-        run_example("canonical/pass.json"),
+        run_example("canonical/allow.json"),
         run_example("canonical/fail.json"),
     ]
-
     if not all(results):
         raise SystemExit(1)
 

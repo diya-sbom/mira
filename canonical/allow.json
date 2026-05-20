@@ -1,0 +1,10 @@
+{
+  "expected_decision": "ALLOW",
+  "description": "Controlled example where valid state and allowed action are accepted",
+  "state": {
+    "valid": true
+  },
+  "action": {
+    "allowed": true
+  }
+}
