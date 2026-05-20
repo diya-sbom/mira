@@ -1,12 +1,17 @@
 # MIRA
 
-MIRA is a verification gate for state transitions.
+Veridian is a cryptographic control plane for autonomous systems.
+
+It verifies actions before execution and state transitions before persistence.
+
+If verification fails, execution halts and no state is committed.
+
+MIRA is the state verification layer within Veridian.
 
 It ensures:
 - only valid state changes are accepted
 - every accepted change produces a verifiable receipt
-- history is tamper-evident
----
+- history is tamper-evident---
 
 ## Verification Contract
 
