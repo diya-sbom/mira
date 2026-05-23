@@ -1,19 +1,26 @@
 #!/usr/bin/env python3
+
 from fastapi import FastAPI, Header, HTTPException
-import json, time, hashlib, os
+import json
+import time
+import hashlib
+import os
 
 app = FastAPI()
 
 LEDGER_PATH = "ledger.jsonl"
 MIRA_API_KEY = os.environ.get("MIRA_API_KEY", "default_secret_key")
 
+
 def canonical_hash(obj):
     data = json.dumps(obj, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(data.encode()).hexdigest()
 
+
 def write_ledger(entry):
     with open(LEDGER_PATH, "a") as f:
         f.write(json.dumps(entry) + "\n")
+
 
 @app.post("/verify")
 def verify(state: dict, api_key: str = Header(default="default_secret_key")):
@@ -22,11 +29,13 @@ def verify(state: dict, api_key: str = Header(default="default_secret_key")):
 
     ts = int(time.time())
 
-    # API now accepts receipt-style verification
-    if state.get("decision") == "PASS" and state.get("record_hash"):
-        decision = "PASS"
+    if (
+        state.get("state", {}).get("valid") is True
+        and state.get("action", {}).get("allowed") is True
+    ):
+        decision = "ALLOW"
     else:
-        decision = "FAIL"
+        decision = "DENY"
 
     state_hash = canonical_hash(state)
 
@@ -34,7 +43,7 @@ def verify(state: dict, api_key: str = Header(default="default_secret_key")):
         "version": "1.0",
         "ts": ts,
         "state": state,
-        "decision": decision
+        "decision": decision,
     }
 
     record_hash = canonical_hash(record)
@@ -43,12 +52,12 @@ def verify(state: dict, api_key: str = Header(default="default_secret_key")):
         "record_hash": record_hash,
         "state_hash": state_hash,
         "ts": ts,
-        "decision": decision
+        "decision": decision,
     }
 
     write_ledger(ledger_entry)
 
     return {
         "decision": decision,
-        "record_hash": record_hash
+        "record_hash": record_hash,
     }
