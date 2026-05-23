@@ -17,3 +17,6 @@ Removing Veridian prevents dependent systems from completing their workflows.
 Each dependent repository increases operational reliance on Veridian.
 
 The goal is to make verification a required control point rather than an optional library.
+
+
+| GitHub Actions verify-output | CI enforcement workflow | Push/PR verification must pass before protected flow proceeds |

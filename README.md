@@ -48,6 +48,15 @@ MIRA accepts valid state transitions and rejects invalid ones.
 No transition is valid without verification.
 ---
 
+
+## CI Enforcement
+
+GitHub Actions runs the `verify-output` job on push and pull request.
+
+The repository now depends on the verification result: canonical examples and API tests must pass before the protected workflow is considered valid.
+
+---
+
 ## Flow
 
 Agent → MIRA → Store → Ledger
