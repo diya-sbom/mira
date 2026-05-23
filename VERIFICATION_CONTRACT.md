@@ -56,3 +56,22 @@ Core invariant:
 
 No valid receipt → no ledger entry.
 No valid hash chain → no trusted history..
+
+
+# Verification Contract
+
+## Endpoint
+
+POST /verify
+
+## Request
+
+```json
+{
+  "state": {
+    "valid": true
+  },
+  "action": {
+    "allowed": true
+  }
+}
