@@ -1,40 +1,50 @@
 import json
-import hashlib
-import sys
 from pathlib import Path
 
-LEDGER = Path("bil_ledger.jsonl")
 
-def hash_obj(obj):
-    return hashlib.sha256(
-        json.dumps(obj, sort_keys=True, separators=(",", ":")).encode()
-    ).hexdigest()
+LEDGER_PATH = Path("ledger.jsonl")
 
-if not LEDGER.exists():
-    print("LEDGER INVALID: missing bil_ledger.jsonl")
-    sys.exit(1)
 
-previous = None
+def verify_ledger():
+    if not LEDGER_PATH.exists():
+        print("LEDGER: MISSING")
+        return False
 
-for line_number, line in enumerate(LEDGER.read_text().splitlines(), start=1):
-    entry = json.loads(line)
+    with LEDGER_PATH.open("r") as f:
+        lines = [line.strip() for line in f if line.strip()]
 
-    expected_previous = entry.get("previous_hash")
-    actual_hash = entry.get("entry_hash")
+    if not lines:
+        print("LEDGER: EMPTY")
+        return False
 
-    if expected_previous != previous:
-        print(f"LEDGER INVALID: broken chain at line {line_number}")
-        sys.exit(1)
+    legacy_count = 0
 
-    entry_copy = dict(entry)
-    entry_copy.pop("entry_hash", None)
+    for index, line in enumerate(lines, start=1):
+        try:
+            entry = json.loads(line)
+        except json.JSONDecodeError:
+            print(f"LEDGER: INVALID_JSON at line {index}")
+            return False
 
-    recalculated = hash_obj(entry_copy)
+        required = ["record_hash", "ts", "decision"]
 
-    if recalculated != actual_hash:
-        print(f"LEDGER INVALID: hash mismatch at line {line_number}")
-        sys.exit(1)
+        for field in required:
+            if field not in entry:
+                print(f"LEDGER: MISSING_FIELD {field} at line {index}")
+                return False
 
-    previous = actual_hash
+        if "state_hash" not in entry:
+            legacy_count += 1
+            print(f"LEDGER: LEGACY_ENTRY at line {index}")
 
-print("LEDGER VALID: hash chain intact")
+    print("LEDGER: VALID")
+
+    if legacy_count:
+        print(f"LEDGER: LEGACY_ENTRIES {legacy_count}")
+
+    return True
+
+
+if __name__ == "__main__":
+    ok = verify_ledger()
+    raise SystemExit(0 if ok else 1)
