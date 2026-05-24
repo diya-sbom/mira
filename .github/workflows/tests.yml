@@ -28,3 +28,6 @@ jobs:
    
       - name: Validate receipt schema
         run: python validate_receipt.py
+
+      - name: Run LangChain adapter tests
+        run: python3 -m pytest tests/test_langchain_adapter.py -v
