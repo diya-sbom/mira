@@ -34,3 +34,5 @@ jobs:
 
       - name: Run AutoGen adapter tests
         run: python3 -m pytest tests/test_autogen_adapter.py -v
+      - name: Run CrewAI adapter tests
+        run: python3 -m pytest tests/test_crewai_adapter.py -v
