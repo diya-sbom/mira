@@ -31,3 +31,6 @@ jobs:
 
       - name: Run LangChain adapter tests
         run: python3 -m pytest tests/test_langchain_adapter.py -v
+
+      - name: Run AutoGen adapter tests
+        run: python3 -m pytest tests/test_autogen_adapter.py -v
