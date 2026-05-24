@@ -1,11 +1,9 @@
 {
-  "expected_decision": "DENY",
-  "description": "Current RealDiya configuration blocks this action",
+  "version": "1.0",
+  "ts": 1740000000,
   "state": {
-    "valid": true
+    "memory": "verified"
   },
-  "action": {
-    "allowed": true,
-    "artifact": "artifact.txt"
-  }
+  "decision": "ALLOW",
+  "record_hash": "178dab3cbf5c64c65105c9044ab6bb1327999995040abeb624767705a6f91857"
 }
