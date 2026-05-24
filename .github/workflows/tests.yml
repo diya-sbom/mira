@@ -25,3 +25,6 @@ jobs:
 
       - name: Run API tests
         run: python -m pytest tests/test_api.py -v
+   
+      - name: Validate receipt schema
+        run: python validate_receipt.py
