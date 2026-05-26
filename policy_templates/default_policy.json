@@ -1,0 +1,17 @@
+{
+  "policy_version": "1.0",
+  "supported_receipt_versions": [
+    "1.0"
+  ],
+  "allowed_decisions": [
+    "ALLOW"
+  ],
+  "required_fields": [
+    "version",
+    "ts",
+    "state",
+    "decision",
+    "record_hash"
+  ],
+  "fail_closed": true
+}
