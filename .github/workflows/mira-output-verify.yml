@@ -22,3 +22,6 @@ jobs:
 
       - name: Run adversarial verifier tests
         run: python3 -m pytest tests/test_adversarial.py -v
+      - name: Install test dependencies
+        run: |
+            python3 -m pip install pytest
