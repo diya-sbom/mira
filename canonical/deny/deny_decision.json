@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "ts": 1740000001,
+  "state": {
+    "memory": "verified"
+  },
+  "decision": "DENY",
+  "record_hash": "policy-deny-example"
+}
