@@ -19,3 +19,6 @@ jobs:
 
       - name: Verify canonical receipt
         run: python3 verify_output.py
+
+      - name: Run adversarial verifier tests
+        run: python3 -m pytest tests/test_adversarial.py -v
