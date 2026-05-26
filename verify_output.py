@@ -7,39 +7,50 @@ REQUIRED_FIELDS = [
     "ts",
     "state",
     "decision",
-    "record_hash"
+    "record_hash",
 ]
 
 VALID_DECISIONS = ["ALLOW", "DENY"]
 
-with open("canonical/pass.json", "r") as f:
-    receipt = json.load(f)
 
-for field in REQUIRED_FIELDS:
-    if field not in receipt:
-        print(f"MISSING_FIELD: {field}")
-        sys.exit(1)
+def verify_receipt(path="canonical/pass.json"):
+    with open(path, "r") as f:
+        receipt = json.load(f)
 
-if receipt["decision"] not in VALID_DECISIONS:
-    print("INVALID_DECISION")
-    sys.exit(1)
+    for field in REQUIRED_FIELDS:
+        if field not in receipt:
+            print(f"MISSING_FIELD: {field}")
+            return False
 
-record_copy = dict(receipt)
-expected_hash = record_copy.pop("record_hash")
+    if receipt["decision"] not in VALID_DECISIONS:
+        print("INVALID_DECISION")
+        return False
 
-canonical = json.dumps(
-    record_copy,
-    sort_keys=True,
-    separators=(",", ":")
-)
+    record_copy = dict(receipt)
+    expected_hash = record_copy.pop("record_hash")
 
-actual_hash = hashlib.sha256(
-    canonical.encode()
-).hexdigest()
+    canonical = json.dumps(
+        record_copy,
+        sort_keys=True,
+        separators=(",", ":")
+    )
 
-if actual_hash != expected_hash:
-    print("HASH_MISMATCH")
-    sys.exit(1)
+    actual_hash = hashlib.sha256(
+        canonical.encode()
+    ).hexdigest()
 
-print("RECEIPT_VALID")
-sys.exit(0)
+    if actual_hash != expected_hash:
+        print("HASH_MISMATCH")
+        return False
+
+    print("RECEIPT_VALID")
+    return True
+
+
+def main():
+    ok = verify_receipt()
+    sys.exit(0 if ok else 1)
+
+
+if __name__ == "__main__":
+    main()
