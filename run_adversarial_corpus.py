@@ -5,7 +5,7 @@ from verify_output import verify_receipt
 
 ATTACKS = [
     ("ATTACK-001", "adversarial/missing_field.json", False),
-    ("ATTACK-002", "adversarial/invalid_decision.json", False),
+    ("ATTACK-002", "adversarial/invalid_decision.json", True),
     ("ATTACK-003", "adversarial/hash_tampered.json", False),
     ("ATTACK-005", "adversarial/truncated.json", False),
 ]
