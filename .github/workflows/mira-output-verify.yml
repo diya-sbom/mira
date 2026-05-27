@@ -26,3 +26,6 @@ jobs:
 
       - name: Run adversarial verifier tests
         run: python3 -m pytest tests/test_adversarial.py -v
+
+      - name: Run adversarial corpus
+        run: python3 run_adversarial_corpus.py
