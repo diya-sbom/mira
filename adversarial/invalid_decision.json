@@ -4,6 +4,6 @@
   "state": {
     "memory": "verified"
   },
-  "decision": "ALLOW_ALL",
+  "decision": "ALLOW",
   "record_hash": "invalid"
 }
