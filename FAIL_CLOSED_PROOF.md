@@ -2,37 +2,39 @@
 
 ## Purpose
 
-This proof demonstrates that an invalid canonical receipt cannot pass the protected verification path.
+This document records the first protected-branch fail-closed proof for MIRA.
 
-## Test Performed
+## Proof Scenario
 
-A temporary branch was created:
+A branch intentionally weakened adversarial corpus expectations.
 
-`fail-closed-proof`
+Branch:
 
-The canonical receipt hash was intentionally changed to:
+`fail-test`
 
-`broken-hash`
+Pull request:
 
-## Result
+`Intentional fail-closed enforcement test`
 
-Running the verifier produced:
+## Expected Behavior
 
-`HASH_MISMATCH`
+The protected verification workflow must fail.
 
-GitHub Actions then failed the required check:
+The pull request must not be mergeable into `main`.
 
-`MIRA Output Verification / verify-output`
+## Observed Behavior
 
-## Enforcement Result
+- GitHub Actions executed automatically
+- MIRA output verification failed
+- protected branch checks blocked progression
+- merge into `main` was not allowed
 
-The protected branch could not proceed because the required verification check failed.
+## Protected Invariant
 
-## Conclusion
+No invalid or weakened integrity expectation may advance into protected state.
 
-Tampered receipt
-→ verifier fails
-→ CI fails
-→ protected branch blocks merge
+## Meaning
 
-This proves fail-closed receipt verification.
+MIRA is not only validating receipts.
+
+MIRA is acting as a fail-closed dependency gate for protected state transitions.
