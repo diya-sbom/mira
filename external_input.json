@@ -1,0 +1,6 @@
+{
+  "action": "write_state",
+  "intended_state_delta": {
+    "status": "approved"
+  }
+}
