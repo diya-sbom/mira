@@ -1,0 +1,6 @@
+MECHANISM_VIOLATION:
+  description: "Scientific reasoning asserts a mechanism that cannot occur under the stated constraints."
+  domains:
+    - chemistry
+    - physics
+  severity: fail
