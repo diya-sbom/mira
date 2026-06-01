@@ -1,0 +1,10 @@
+{"type": "TEST_RECORD", "status": "PASS"}
+{"type": "INTENT_RECORD", "action": "write_state", "decision": "PASS"}
+{"type": "INTENT_RECORD", "action": "write_state", "decision": "PASS"}
+{"type": "STATE_RECORD", "state": {"status": "approved"}, "decision": "PASS"}
+{"type": "INTENT_RECORD", "action": "write_state", "decision": "PASS"}
+{"type": "STATE_RECORD", "state": {"status": "approved"}, "decision": "PASS"}
+{"type": "COMMIT_RECORD", "commit": "ALLOWED", "decision": "PASS"}
+{"type": "INTENT_RECORD", "action": "write_state", "decision": "PASS"}
+{"type": "STATE_RECORD", "status": "approved", "decision": "PASS"}
+{"type": "COMMIT_RECORD", "commit": "state_store", "decision": "PASS"}
